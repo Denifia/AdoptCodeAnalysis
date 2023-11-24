@@ -14,8 +14,6 @@ do
     lines.Add(await Console.In.ReadLineAsync());
 } while (lines.Count < 2 || !lines[^2..].TrueForAll(string.IsNullOrWhiteSpace));
 
-
-
 var errorHook = ": error ";
 var errors = lines
     .Where(x => x is not null)
